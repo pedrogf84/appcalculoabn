@@ -1,0 +1,128 @@
+.activity-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2px;
+
+  span {
+    display: flex;
+    padding: 10px;
+
+    .return-btn {
+      display: flex;
+      align-items: center;
+      border: 3px solid $secondary;
+      border-radius: 50%;
+      background-color: transparent;
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+      color: $secondary;
+      text-align: center;
+    }
+  }
+
+  @include desktop {
+    span {
+      padding: 10px 60px;
+    }
+  }
+
+
+  .header-activity {
+    margin-bottom: 2%;
+
+    .activity-title {
+      color: $textSecondary;
+      font-size: 18px;
+      text-align: center;
+    }
+
+  }
+
+  .question-frame {
+    border: 3px solid $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    border-radius: 5px;
+
+
+    .question {
+      font-size: 65px;
+      max-width: 650px;
+      color: $primary;
+      padding: 5px 0;
+
+    }
+
+    .answer-group {
+      height: 100%;
+      padding: 5px 0;
+
+      .answer {
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+
+
+        input {
+          height: 100%;
+          width: 70%;
+          border: 1px solid $primary;
+          font-size: 40px;
+          font-weight: 700;
+          color: #333;
+          padding: 10px 0;
+
+
+        }
+
+        .next-btn {
+          height: 100%;
+          border: none;
+          background-color: $primary;
+          color: white;
+          font-size: 40px;
+          vertical-align: middle;
+          padding: 10px 0;
+        }
+      }
+
+
+    }
+
+    @include desktop {
+      .question-frame {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 50px 0;
+
+
+
+      }
+
+      input {
+        max-width: 150px;
+      }
+    }
+
+  }
+
+  .send-btn {
+    height: 60px;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    font-size: 40px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 3px;
+  }
+
+
+}

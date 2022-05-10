@@ -1,0 +1,156 @@
+.dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  gap: 10px;
+
+  h2 {
+    color: $textSecondary;
+    font-family: "Oswald", sans-serif;
+    vertical-align: middle;
+  }
+
+  a {
+    width: 90%;
+    padding: 0;
+
+    .aux-btn {
+
+      padding: 10px;
+      border: none;
+      border-radius: 2px;
+      background-color: $auxButton;
+      color: whitesmoke;
+      font-size: 20px;
+      width: 100%;
+
+      @include desktop {
+        max-width: 400px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dashboard-main-list-container {
+    width: 100%;
+
+    @include desktop {
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 100%;
+      //flex-direction: column;
+      align-items: center;
+
+      .container-activities {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .individual-box {
+          width: 20%;
+          max-width: 22%;
+        }
+
+        .container-activities-by-type {
+          display: flex;
+          flex-direction: column;
+          margin: 10px auto;
+          width: 100%;
+
+          .toggle-type-button {
+            padding: 10px;
+            border: none;
+            border-radius: 2px;
+            background-color: $buttonColor;
+            color: white;
+            font-size: 20px;
+            width: 100%;
+            cursor: pointer;
+          }
+
+          .activities-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 25px 0;
+            width: 100%;
+            background-color: white;
+
+            .activity-card {}
+          }
+        }
+      }
+    }
+
+    .container-activities-by-type.showContainer {
+      border: 3px solid $buttonColor;
+      border-radius: 4px;
+    }
+  }
+
+  .container-activities-by-type {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 90%;
+
+    .toggle-type-button {
+      padding: 10px;
+      border: none;
+      border-radius: 2px;
+      background-color: $buttonColor;
+      color: whitesmoke;
+      font-size: 20px;
+      width: 100%;
+    }
+
+    .activities-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px 0;
+
+      .activity-item {
+        .activity-anchor {
+          .activity-btn {
+            width: 60px;
+            height: 60px;
+            background-color: $buttonColor;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 28px;
+            text-align: center;
+            font-weight: 700;
+            font-family: 'Lobster', sans-serif;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+          }
+
+          .completed {
+            background-color: green;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.container-activities-by-type.showContainer {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.activity-anchor {
+  margin: 5px;
+  padding: 0 5px;
+}
